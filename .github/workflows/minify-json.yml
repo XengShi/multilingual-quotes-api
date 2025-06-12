@@ -4,8 +4,10 @@ name: Minify JSON Files
 
 # Define when this workflow should run
 on:
-    # Run when JSON files in data/ folder are pushed to repository
+    # Run only when JSON files in data folder are pushed to the main branch
     push:
+        branches:
+            - main
         paths:
             - "data/**/*.json"
     # Allow manual triggering from GitHub Actions tab
