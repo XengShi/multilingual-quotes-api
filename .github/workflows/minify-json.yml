@@ -115,7 +115,7 @@ jobs:
                            
                               // Store all metadata for this file
                               metadata.files[filename] = {
-                                  source: inputFile,       // Original file path
+                                  language: filename.replace('.json', ''), // Extract language code from filename
                                   count: quoteCount,       // Number of quotes in the file
                                   size_kb: fileSize        // Minified file size in kilobytes
                               };
